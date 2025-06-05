@@ -4,9 +4,12 @@
   height: 100vh;
   font-family: Arial, sans-serif;
   background-image: url('/src/assets/background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-/* For a semi-transparent overlay effect (optional) */
+/* Overlay to enhance the background colors */
 .app-container::before {
   content: '';
   position: absolute;
@@ -14,8 +17,9 @@
   left: 0;
   width: 100%;
   height: 100%;
- 
+  background-color: rgba(0, 80, 170, 0.15); /* Blue tint overlay */
   z-index: -1;
+  pointer-events: none; /* Allows clicking through the overlay */
 }
 
 /* Top navigation bar styles */
@@ -40,6 +44,13 @@
   width: auto;
 }
 
+.nav-bar {
+  display: flex;
+  justify-content: flex-end; /* Push everything to the right */
+  align-items: center;
+  width: 100%;
+}
+
 .nav-bar ul {
   list-style: none;
   display: flex;
@@ -62,6 +73,21 @@
   color: #d6e4ff;
 }
 
+.nav-right-group {
+  display: flex;
+  align-items: center;
+}
+
+.left-icon-section {
+  margin-right: 15px; /* Space between the icon and profile dropdown */
+}
+
+.vector-icon {
+  height: 24px;
+  width: auto;
+  cursor: pointer;
+}
+
 .content-wrapper {
   display: flex;
   flex: 1;
@@ -74,4 +100,17 @@
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
   overflow: auto;
+}
+
+/* Add to your App.css file */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-dropdown {
+  height: 40px; /* Adjust size as needed */
+  width: auto;
+  cursor: pointer;
 }

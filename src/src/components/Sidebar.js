@@ -2,8 +2,17 @@
 import React from 'react';
 import './Sidebar.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faFileAlt, faListAlt, faGavel, faHandshake, faEnvelope, faExclamationTriangle, faBalanceScale, faHistory } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+// Import the Vector images for buttons
+import registerIcon from '../assets/Vector (2).png';
+import distributeIcon from '../assets/Vector (3).png';
+import caseListIcon from '../assets/Vector (4).png';
+import drcIcon from '../assets/Vector (5).png';
+import settlementIcon from '../assets/Vector (6).png';
+import disputeIcon from '../assets/Vector (7).png';
+import litigationIcon from '../assets/Vector (8).png';
+import logsIcon from '../assets/Mask group.png';
 const sltLogo = require('../assets/SLT logo.png');
 
 const Sidebar = () => {
@@ -12,36 +21,35 @@ const Sidebar = () => {
       {/* Main Menu Section */}
       <div className="menu-section">
         <button>
-          <FontAwesomeIcon icon={faPlus} className="button-icon" /> Register
+          <img src={registerIcon} alt="Register" className="custom-icon" /> Register
         </button>
         <button>
-          <FontAwesomeIcon icon={faFileAlt} className="button-icon" /> Distribute
+          <img src={distributeIcon} alt="Distribute" className="custom-icon" /> Distribute
         </button>
         <button>
-          <FontAwesomeIcon icon={faListAlt} className="button-icon" /> Case List
+          <img src={caseListIcon} alt="Case List" className="custom-icon" /> Case List
         </button>
         <button>
-          <FontAwesomeIcon icon={faGavel} className="button-icon" /> DRC
+          <img src={drcIcon} alt="DRC" className="custom-icon" /> DRC
         </button>
         <button>
-          <FontAwesomeIcon icon={faHandshake} className="button-icon" /> Settlement
+          <img src={settlementIcon} alt="Settlement" className="custom-icon" /> Settlement
         </button>
         <button>
           <FontAwesomeIcon icon={faEnvelope} className="button-icon" /> Letter Of Demand
         </button>
         <button>
-          <FontAwesomeIcon icon={faExclamationTriangle} className="button-icon" /> Dispute
+          <img src={disputeIcon} alt="Dispute" className="custom-icon" /> Dispute
         </button>
         <button>
-          <FontAwesomeIcon icon={faBalanceScale} className="button-icon" /> Litigation
+          <img src={litigationIcon} alt="Litigation" className="custom-icon" /> Litigation
         </button>
         <button>
-          <FontAwesomeIcon icon={faHistory} className="button-icon" /> Logs
+          <img src={logsIcon} alt="Logs" className="custom-icon" /> Logs
         </button>
       </div>
 
       <div className="logo-container">
-        <div className="logo-placeholder">SLT Mobitel</div>
         <img src={sltLogo} alt="SLT Mobitel Logo" className="slt-logo" />
       </div>
     </div>
